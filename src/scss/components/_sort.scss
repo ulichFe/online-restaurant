@@ -1,0 +1,67 @@
+@import "../variables";
+
+.sort {
+  position: relative;
+
+  &__label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  &__type {
+    color: $red;
+    border-bottom: 1px dashed $red;
+    cursor: pointer;
+  }
+
+  &__popup {
+    position: absolute;
+    right: 0;
+    margin-top: 15px;
+    background: #ffffff;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.09);
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 10px 0;
+    width: 160px;
+  }
+}
+.list {
+  overflow: hidden;
+
+  &__item {
+    padding: 12px 20px;
+    cursor: pointer;
+
+    &.active,
+    &:hover {
+      background-color: #f9f9f9;
+    }
+
+    &.active {
+      font-weight: bold;
+      color: $red;
+    }
+  }
+}
+@media (max-width: 1060px) {
+  .sort {
+    margin-bottom: 20px;
+    &__popup {
+      left: -1px;
+    }
+  }
+}
+@media (max-width: 460px) {
+  .sort {
+    font-size: 15px;
+    &__popup {
+      font-size: 14px;
+    }
+  }
+  .list {
+    &__item {
+      padding: 10px 15px;
+    }
+  }
+}

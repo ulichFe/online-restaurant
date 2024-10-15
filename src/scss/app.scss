@@ -1,0 +1,49 @@
+@import "variables";
+@import "normalize";
+@import "button";
+@import "components";
+@import "pages";
+
+body {
+  background-color: $background;
+}
+
+.wrapper {
+  width: calc(100vw - 100px);
+  height: 100%;
+  background-color: #fff;
+  margin: 50px auto;
+  border-radius: 10px;
+  max-width: 1400px;
+}
+
+.content {
+  padding: 40px 0;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+
+  &--cart {
+    max-width: 820px;
+    margin: 50px auto;
+
+    .content__title {
+      margin: 0;
+    }
+  }
+}
+
+@media (max-width: 1060px) {
+  .content {
+    padding: 20px 0;
+  }
+}
+
+@media (max-width: 460px) {
+  .wrapper {
+    width: calc(110vw - 100px);
+    margin: 25px auto;
+  }
+}

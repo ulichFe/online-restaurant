@@ -1,0 +1,38 @@
+.pagination {
+  display: flex;
+  column-gap: 5px;
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #d90007;
+    border-radius: 100%;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    color: #d90007;
+
+    &:hover {
+      background-color: #d90007;
+      color: white;
+    }
+
+    &:active {
+      background-color: darken(#d90007, 12%);
+    }
+  }
+
+  .selected {
+    a {
+      background-color: #d90007;
+      color: white;
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .pagination {
+    justify-content: center;
+  }
+}

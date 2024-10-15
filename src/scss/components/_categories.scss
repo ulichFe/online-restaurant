@@ -1,0 +1,43 @@
+@import "../variables";
+
+.categories {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 7px;
+    column-gap: 10px;
+
+    &-item {
+      background-color: #f9f9f9;
+      padding: 13px 30px;
+      border-radius: 30px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.1s ease-in-out;
+
+      &:hover {
+        background-color: darken(#f9f9f9, 2%);
+      }
+
+      &:active {
+        background-color: darken(#f9f9f9, 5%);
+      }
+
+      &.active {
+        background-color: #282828;
+        color: #fff;
+      }
+    }
+  }
+}
+
+@media (max-width: 460px) {
+  .categories {
+    &__list {
+      &-item {
+        font-size: 14px;
+        padding: 11px 25px;
+      }
+    }
+  }
+}
