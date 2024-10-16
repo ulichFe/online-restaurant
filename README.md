@@ -1,1 +1,1 @@
-Demo: https://online-restaurant-alpha.netlify.app/cart
+Demo: https://online-restaurant-alpha.netlify.app/
